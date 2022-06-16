@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleindex.css">
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping-cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styleindex.css" />
+    <link rel="stylesheet" href="css/reponsive.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <div class="img-nav">
+                <img src="img/logo.png" alt="" />
+            </div>
+            <div class="content-nav">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="xemay.html">Xe máy</a></li>
+                    <li><a href="phutung.html">Phụ Tùng</a></li>
+                    <li><a href="phukien.html">Phụ kiện</a></li>
+                    <li><a href="donggop.html">Đóng Gọp</a></li>
+                    <li><a href="Gioithieu.html">Giới Thiệu</a></li>
+                </ul>
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+           
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- content -->
+    <div id="slider">
+        <div id="slider">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                  <img src="./images/banner tieu đè.jpg" alt="" width="1900px" height="400px">
+                  <div class="text"></div>
+                </div>
+               
+                <div class="mySlides fade">
+                  <img src="./images/bannerlead.jpg" alt="" width="1900px" height="400px">
+                  <div class="text"></div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="./images/bannerab.jpg" alt="" width="1900px" height="400px">
+                    <div class="text"></div>
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="./images/bannerblead.jpg" alt="" width="1900px" height="400px">
+                    <div class="text"></div>
+                  </div> <div class="mySlides fade">
+                    <img src="./images/bannersuppercup.jpg" alt="" width="1900px" height="400px">
+                    <div class="text"></div>
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="./images/bannerwavea.jpg" alt="" width="1900px" height="400px">
+                    <div class="text"></div>
+                  </div>
+               
+                <div class="mySlides fade">
+                  <img src="./images/bannerab.jpg" alt="" width="1900px" height="400px">
+                  <div class="text"></div>
+                </div>
+              </div>
+              <br>
+               
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(0)"></span> 
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span> 
+              </div>
+              <script>
+                //khai báo biến slideIndex đại diện cho slide hiện tại
+                var slideIndex;
+                // KHai bào hàm hiển thị slide
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                       slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+               
+                    slides[slideIndex].style.display = "block";  
+                    dots[slideIndex].className += " active";
+                    //chuyển đến slide tiếp theo
+                    slideIndex++;
+                    //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+                    if (slideIndex > slides.length - 1) {
+                      slideIndex = 0
+                    }    
+                    //tự động chuyển đổi slide sau 5s
+                    setTimeout(showSlides, 5000);
+                }
+                //mặc định hiển thị slide đầu tiên 
+                showSlides(slideIndex = 0);
+               
+               
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+              </script>
+          </div>
+      </div>
+    <section class="wrapper">
+        <div class="products">
+            <ul>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/honda-wave-alpha-4-454d.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Wave a</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">19.000.000đ</span>
+                            </div>
+                            <a href="wavea.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/blead.webp"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Blead</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">18.000.000đ</span>
+                            </div>
+                            <a href="blead.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/rsx.jfif"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Wave RSX</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">25.000.000đ</span>
+                            </div>
+                            <a href="rsx.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/future.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Future</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">31.000.000đ</span>
+                            </div>
+                            <a href="future.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/honda-vision-2021_thanhnien-3_laad.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Vision</h3>
+                        </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">30.000.000đ</span>
+                            </div>
+                            <a href="vision.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/lead.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Lead</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">32.000.000đ</span>
+                            </div>
+                            <a href="lead.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/ab.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Ablead</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">50.000.000đ</span>
+                            </div>
+                            <a href="ab.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/vario-removebg-preview.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Vario</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">50.000.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/sh-removebg-preview.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">SH</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">80.000.000đ</span>
+                            </div>
+                            <a href="SHi.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/sh-mode-vne-2021-2-1639287039-3459-1639287261.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">SH mode 125</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">58.000.000đ</span>
+                            </div>
+                            <a href="shmode.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/sh mode 150.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Sh mode 150</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">.67.000.000đ</span>
+                            </div>
+                            <a href="SHi.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="images/sh i125.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Sh i 125</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">60.000.000đ</span>
+                            </div>
+                            <a href="SHi.html"><button type="button" class="btn btn-cart">Mua</button></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+   
+
+                    <div id="footer">
+                        <div class="container">
+                            <!--Bắt Đầu Nội Dung Giới Thiệu-->
+                            <div class="noi-dung about">
+                                <h2>Về Chúng Tôi</h2>
+                                <p>Được thành lập vào năm 1997, Công Ty TNHH TM&DV Quảng Trị là đơn vị kinh doanh xe máy, phụ tùng và dịch vụ bảo hành bảo dưỡng, sửa chữa xe máy tại Tỉnh Quảng Trị. Sau hơn 20 năm có mặt tại thị trường Tỉnh Quảng Trị, Công Ty TNHH TM&DV Quảng Trị đã không ngừng phát triển và trở thành một trong những Công Ty dẫn đầu trong lĩnh vực kinh doanh xe máy tại Quảng Trị.</p>
+                                <ul class="social-icon">
+                                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                            <!--Kết Thúc Nội Dung Giới Thiệu-->
+                            <!--Bắt Đầu Nội Dung Đường Dẫn-->
+                            <div class="noi-dung links">
+                                <h2>Đường Dẫn</h2>
+                                <ul>
+                                    <li><a href="index.html">Trang Chủ</a></li>
+                                    <li><a href="xemay.html">Xe máy</a></li>
+                                    <li><a href="phutung.html">Phụ tùng</a></li>
+                                    <li><a href="phukien.html">Phụ kiện</a></li>
+                                    <li><a href="donggop.html">Đóng góp</a></li>
+                                    <li><a href="gioithieu.html">Giới thiệu</a></li>
+                                    
+                                </ul>
+                            </div>
+                            <!--Kết Thúc Nội Dung Đường Dẫn-->
+                            <!--Bắt Đâu Nội Dung Liên Hệ-->
+                            <div class="noi-dung contact">
+                                <h2>Thông Tin Liên Hệ</h2>
+                                <ul class="info">
+                                    <li>
+                                        <span><i class="fa fa-map-marker"></i></span>
+                                        <span>01 Húc Thượng ,Húc,Hướng Hóa,Quảng Trị </span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa fa-phone"></i></span>
+                                        <p><a href="#">+84 63 953 610</a>
+                                            <br />
+                                            <a href="#">+84 26 054 995</a></p>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa fa-envelope"></i></span>
+                                        <p><a href="#">hondaquangtri@gmail.com</a></p>
+                                   </li>
+                                    <li>
+                                        <form class="form">
+                                            </form>
+</body>
+</html>

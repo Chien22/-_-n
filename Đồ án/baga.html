@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+      <!-- header -->
+      <header>
+        <nav>
+            <div class="img-nav">
+                <img src="img/logo.png" alt="" />
+            </div>
+            <div class="content-nav">
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="xemay.html">Xe máy</a></li>
+                    <li><a href="phutung.html">Phụ Tùng</a></li>
+                    <li><a href="phukien.html">Phụ kiện</a></li>
+                    <li><a href="donggop.html">Đóng Gọp</a></li>
+                    <li><a href="Gioithieu.html">Giới Thiệu</a></li>
+                </ul>
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+           
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div id="slider">
+        <img src="images/bannerphuken.jpg" alt="" width="1900px" height="400px">
+       </div>
+    <div class="container"> 
+        <div class="card"> 
+         <div class="container-fliud"> 
+          <div class="wrapper row"> 
+           <div class="preview col-md-6"> 
+            <div class="preview-pic tab-content"> 
+             <div class="tab-pane active" id="pic-1"><img src="images/baga-removebg-preview.png" alt="">
+             </div> 
+             <div class="tab-pane" id="pic-2"><img src="" >
+             </div> 
+             <div class="tab-pane" id="pic-3"><img src="" >
+             </div> 
+             <div class="tab-pane" id="pic-4"><img src="" >
+             </div> 
+             <div class="tab-pane" id="pic-5"><img src="" >
+             </div> 
+            </div> 
+            <ul class="preview-thumbnail nav nav-tabs"> 
+             
+            </ul> 
+           </div> 
+           <div class="details col-md-6"> 
+            <h3 class="product-title">Baga</h3> 
+            <div class="rating"> 
+             <div class="stars"> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star checked"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> 
+            </div> <span class="review-no">123 đánh giá</span> 
+            </div> 
+            <p class="product-description">	</p> 
+            <h4 class="price">Giá bán: 150.000 đ</h4>
+        </p>
+         
+             
+            
+            <div class="action"> <a href="" target="_blank">            <button class="add-to-cart btn btn-default" type="button">MUA NGAY</button>            </a> <a href="" target="_blank">            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>            </a> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div>
+       </div> 
+       
+       <div id="footer">
+        <div class="container">
+            <!--Bắt Đầu Nội Dung Giới Thiệu-->
+            <div class="noi-dung about">
+                <h2>Về Chúng Tôi</h2>
+                <p>Được thành lập vào năm 1997, Công Ty TNHH TM&DV Quảng Trị là đơn vị kinh doanh xe máy, phụ tùng và dịch vụ bảo hành bảo dưỡng, sửa chữa xe máy tại Tỉnh Quảng Trị. Sau hơn 20 năm có mặt tại thị trường Tỉnh Quảng Trị, Công Ty TNHH TM&DV Quảng Trị đã không ngừng phát triển và trở thành một trong những Công Ty dẫn đầu trong lĩnh vực kinh doanh xe máy tại Quảng Trị.</p>
+                <ul class="social-icon">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <!--Kết Thúc Nội Dung Giới Thiệu-->
+            <!--Bắt Đầu Nội Dung Đường Dẫn-->
+            <div class="noi-dung links">
+                <h2>Đường Dẫn</h2>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="xemay.html">Xe máy</a></li>
+                    <li><a href="phutung.html">Phụ tùng</a></li>
+                    <li><a href="phukien.html">Phụ kiện</a></li>
+                    <li><a href="donggop.html">Đóng góp</a></li>
+                    <li><a href="gioithieu.html">Giới thiệu</a></li>
+                    
+                </ul>
+            </div>
+            <!--Kết Thúc Nội Dung Đường Dẫn-->
+            <!--Bắt Đâu Nội Dung Liên Hệ-->
+            <div class="noi-dung contact">
+                <h2>Thông Tin Liên Hệ</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-map-marker"></i></span>
+                        <span>01 Húc Thượng ,Húc,Hướng Hóa,Quảng Trị </span>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-phone"></i></span>
+                        <p><a href="#">+84 63 953 610</a>
+                            <br />
+                            <a href="#">+84 26 054 995</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope"></i></span>
+                        <p><a href="#">hondaquangtri@gmail.com</a></p>
+                   </li>
+                    <li>
+                        <form class="form">
+                            </form>
+</body>
+</html>
